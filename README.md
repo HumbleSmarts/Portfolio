@@ -13,6 +13,14 @@ This project was built using these technologies.
 
 You will need `node.js` and `git` installed globally on your machine.
 
+## Features
+
+📖 Multi-Page Layout
+
+🎨 Styled with React-Bootstrap and Css with easy to customize colors
+
+📱 Fully Responsive
+
 ## 🛠 Installation and Setup Instructions
 
 1. Installation: `npm install`
@@ -31,3 +39,4 @@ You will find all the components used and you can edit your information accordin
 ### Show your support
 
 Give a ⭐ if you like this website!
+<a href="https://www.buymeacoffee.com/humblesmarts" target="_blank"></a>
