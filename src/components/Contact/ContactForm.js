@@ -7,7 +7,6 @@ const ContactForm = () => {
     name: "",
     email: "",
     message: "",
-   
   };
   const validationSchema = Yup.object({
     name: Yup.string().required("Name is required"),
@@ -15,7 +14,6 @@ const ContactForm = () => {
       .email("Invalid email address")
       .required("Email is required"),
     message: Yup.string().required("Message is required"),
-   
   });
 
   /* --------- */
@@ -24,11 +22,10 @@ const ContactForm = () => {
 
   const onSubmit = async (formData, { resetForm, setFieldValue }) => {
     try {
-        const form = new FormData();
-        form.append("name", formData.name);
-        form.append("email", formData.email);
-        form.append("message", formData.message);
-
+      const form = new FormData();
+      form.append("name", formData.name);
+      form.append("email", formData.email);
+      form.append("message", formData.message);
 
       fetch("http://localhost:3001/api/contact/", {
         method: "POST",
@@ -106,7 +103,6 @@ const ContactForm = () => {
             <button type="submit" disabled={isSubmitting}>
               Submit{" "}
             </button>
-            
           </div>
         </Form>
       )}

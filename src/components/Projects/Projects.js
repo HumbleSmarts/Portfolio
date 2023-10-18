@@ -55,8 +55,8 @@ function Projects() {
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
-              title="Blog App"
-              description="Realtime huspital finder build with Python, Django and API which feeds data from 
+              title="Hospital Locator"
+              description="Realtime hospital finder build with Python, Django and API which feeds data from 
                           Google map to locate a hospital close to you the content. 
                           Accuracy is 99.9 persent."
               ghLink="https://github.com/HumbleSmarts/Blog-app"
@@ -73,8 +73,8 @@ function Projects() {
                           Online Editor which supports html, css, and js code with instant view of website. 
                           Online markdown editor for building README file which supports GFM, Custom Html tags with 
                           toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"
+              ghLink="https://github.com/humblesmarts/Editor.io"
+              demoLink="https://humblesmarts.github.io/editor.io/"
             />
           </Col>
 
