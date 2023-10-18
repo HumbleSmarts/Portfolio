@@ -8,6 +8,7 @@ const ContactForm = () => {
     email: "",
     message: "",
   };
+
   const validationSchema = Yup.object({
     name: Yup.string().required("Name is required"),
     email: Yup.string()
@@ -16,33 +17,24 @@ const ContactForm = () => {
     message: Yup.string().required("Message is required"),
   });
 
-  /* --------- */
-  /* To use Api  */
-  /* --------- */
+  const FORM_ENDPOINT =
+    "https://public.herotofu.com/v1/84c1ead0-16ca-11ee-9e42-f75d394a54ad";
 
-  const onSubmit = async (formData, { resetForm, setFieldValue }) => {
+  const onSubmit = async (formData, { resetForm }) => {
     try {
       const form = new FormData();
       form.append("name", formData.name);
       form.append("email", formData.email);
       form.append("message", formData.message);
 
-      fetch("http://localhost:3001/api/contact/", {
+      fetch(FORM_ENDPOINT, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        body: form,
       }).then((response) => {
         if (response.ok) {
-          // Handle success
-          // Successful submission, reset the form
           resetForm();
-          // Clear the uploaded file by resetting the file input
-          setFieldValue("file", null);
-          console.log("success");
+          console.log("Success");
         } else {
-          // Handle errors
           console.error("Submission failed");
         }
       });
@@ -57,7 +49,7 @@ const ContactForm = () => {
       validationSchema={validationSchema}
       onSubmit={onSubmit}
     >
-      {({ isSubmitting, status, fileInputKey, setFieldValue, resetForm }) => (
+      {({ isSubmitting, status }) => (
         <Form>
           {status === "success" && (
             <div className="success-message">Submission successful!</div>
@@ -69,7 +61,7 @@ const ContactForm = () => {
           )}
 
           <div>
-            <label htmlFor="name"></label>
+            <label htmlFor="name">Name</label>
             <Field
               type="text"
               id="name"
@@ -79,7 +71,7 @@ const ContactForm = () => {
             <ErrorMessage name="name" component="div" className="error" />
           </div>
           <div>
-            <label htmlFor="email"></label>
+            <label htmlFor="email">Email</label>
             <Field
               type="email"
               id="email"
@@ -89,7 +81,7 @@ const ContactForm = () => {
             <ErrorMessage name="email" component="div" className="error" />
           </div>
           <div>
-            <label htmlFor="message"></label>
+            <label htmlFor="message">Message</label>
             <Field
               as="textarea"
               id="message"
@@ -101,7 +93,7 @@ const ContactForm = () => {
 
           <div>
             <button type="submit" disabled={isSubmitting}>
-              Submit{" "}
+              Submit
             </button>
           </div>
         </Form>
