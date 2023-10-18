@@ -39,4 +39,4 @@ You will find all the components used and you can edit your information accordin
 ### Show your support
 
 Give a ⭐ if you like this website!
-<a href="https://www.buymeacoffee.com/humblesmarts" target="_blank"></a>
+<a href="https://www.buymeacoffee.com/humblesmarts" target="_blank">Give a ⭐ if you like this website!</a>
