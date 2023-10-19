@@ -9,37 +9,54 @@ const ContactForm = () => {
     message: "",
   };
 
-  const validationSchema = Yup.object({
-    name: Yup.string().required("Name is required"),
+  const validationSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(4, "Name must be at least 4 characters")
+      .required("Name is required"),
     email: Yup.string()
       .email("Invalid email address")
       .required("Email is required"),
-    message: Yup.string().required("Message is required"),
+    message: Yup.string()
+      .min(10, "Message must be at least 10 characters")
+      .required("Message is required"),
   });
+
+  // const validationSchema = Yup.object({
+  //   name: Yup.string()
+  //     .required("Name is required"),
+  //     .min(4, "Name must be at least 4 characters")
+  //   email: Yup.string()
+  //     .email("Invalid email address")
+  //     .required("Email is required"),
+  //   message: Yup.string().required("Message is required"),
+  // });
 
   const FORM_ENDPOINT =
     "https://public.herotofu.com/v1/84c1ead0-16ca-11ee-9e42-f75d394a54ad";
 
-  const onSubmit = async (formData, { resetForm }) => {
+  const onSubmit = async (formData, { resetForm, setStatus }) => {
     try {
       const form = new FormData();
       form.append("name", formData.name);
       form.append("email", formData.email);
       form.append("message", formData.message);
 
-      fetch(FORM_ENDPOINT, {
+      const response = await fetch(FORM_ENDPOINT, {
         method: "POST",
         body: form,
-      }).then((response) => {
-        if (response.ok) {
-          resetForm();
-          console.log("Success");
-        } else {
-          console.error("Submission failed");
-        }
       });
+
+      if (response.ok) {
+        resetForm();
+        setStatus("success");
+        console.log("Success");
+      } else {
+        setStatus("error");
+        console.error("Submission failed");
+      }
     } catch (error) {
       console.error("Error:", error);
+      setStatus("error");
     }
   };
 
@@ -61,7 +78,6 @@ const ContactForm = () => {
           )}
 
           <div>
-            <label htmlFor="name">Name</label>
             <Field
               type="text"
               id="name"
@@ -69,9 +85,7 @@ const ContactForm = () => {
               placeholder="Input your name"
             />
             <ErrorMessage name="name" component="div" className="error" />
-          </div>
-          <div>
-            <label htmlFor="email">Email</label>
+
             <Field
               type="email"
               id="email"
@@ -79,9 +93,7 @@ const ContactForm = () => {
               placeholder="Input a valid email"
             />
             <ErrorMessage name="email" component="div" className="error" />
-          </div>
-          <div>
-            <label htmlFor="message">Message</label>
+
             <Field
               as="textarea"
               id="message"
@@ -89,9 +101,7 @@ const ContactForm = () => {
               placeholder="Drop your message here"
             />
             <ErrorMessage name="message" component="div" className="error" />
-          </div>
 
-          <div>
             <button type="submit" disabled={isSubmitting}>
               Submit
             </button>
