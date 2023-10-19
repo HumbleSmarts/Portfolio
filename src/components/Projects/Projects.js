@@ -43,7 +43,7 @@ function Projects() {
               imgPath={loginapp}
               isBlog={false}
               title="Authentication App"
-              description="Personal authenticate web app that alows user and to provide correct login details 
+              description="Authenticate web app that alows user and to provide correct login details 
                           or deny any access to the protected data based on their authentication using react 
                           router dom programmed in Reactjs"
               ghLink="https://github.com/humblesmarts/Loginapp/"
@@ -64,7 +64,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          {/* <Col md={4} className="project-card">
             <ProjectCard
               imgPath={editor}
               isBlog={false}
@@ -76,7 +76,7 @@ function Projects() {
               ghLink="https://github.com/humblesmarts/Editor.io"
               demoLink="https://humblesmarts.github.io/editor.io/"
             />
-          </Col>
+          </Col> */}
 
           <Col md={4} className="project-card">
             <ProjectCard
@@ -106,11 +106,11 @@ function Projects() {
             <ProjectCard
               imgPath={emotion}
               isBlog={false}
-              title="Databass Design For a School"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. 
-                          The classifier sucessfully predicted the various types of emotions of human. And the highest 
-                          accuracy obtained with the model was 60.1%. Then used Open-CV to detect the face in an image and t
-                          hen pass the face to the classifer to predict the emotion of a person."
+              title="Database Design For a School"
+              description="Design of an advanced database system for a school is a 
+              comprehensive solution for school management, catering to the diverse 
+              needs of administrators, teachers, and students. This database system was
+              implemented using a relational database management system (RDBMS)."
               ghLink="https://github.com/humblesmarts/database"
               // demoLink="https://humblesmarts.github.io/Blog-app/"      <--------Please include a demo link here
             />
