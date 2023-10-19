@@ -69,7 +69,8 @@ const ContactForm = () => {
       validationSchema={validationSchema}
       onSubmit={onSubmit}
     >
-      {({ isSubmitting, status }) => (
+      {/* to use the status report add STATUS to isSubmitting */}
+      {({ isSubmitting }) => (
         <Form>
           {/*  Adding a status report on the form that displays report on the form */}
 
