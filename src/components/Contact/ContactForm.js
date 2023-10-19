@@ -48,6 +48,7 @@ const ContactForm = () => {
       });
 
       // Adding a popup notification upon form submittion
+      // You can find more information on customization in the SweetAlert2 documentation: https://sweetalert2.github.io/
       if (response.ok) {
         resetForm();
         setStatus("success");
