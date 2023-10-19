@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import Swal from "sweetalert2";
 
 const ContactForm = () => {
   const initialValues = {
@@ -46,17 +47,19 @@ const ContactForm = () => {
         body: form,
       });
 
+      // Adding a popup notification upon form submittion
       if (response.ok) {
         resetForm();
         setStatus("success");
-        console.log("Success");
+        Swal.fire("Success", "Submission was successful!", "success");
       } else {
         setStatus("error");
-        console.error("Submission failed");
+        Swal.fire("Error", "Submission failed. Please try again.", "error");
       }
     } catch (error) {
       console.error("Error:", error);
       setStatus("error");
+      Swal.fire("Error", "An error occurred. Please try again.", "error");
     }
   };
 
@@ -68,15 +71,16 @@ const ContactForm = () => {
     >
       {({ isSubmitting, status }) => (
         <Form>
-          {status === "success" && (
+          {/*  Adding a status report on the form that displays report on the form */}
+
+          {/* {status === "success" && (
             <div className="success-message">Submission successful!</div>
           )}
           {status === "error" && (
             <div className="error-message">
               Submission failed. Please try again.
             </div>
-          )}
-
+          )} */}
           <div>
             <Field
               type="text"

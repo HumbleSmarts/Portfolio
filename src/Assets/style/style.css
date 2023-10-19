@@ -304,12 +304,12 @@ button:focus {
   font-weight: 600 !important;
 }
 
-/* .Typewriter__cursor {
+.Typewriter__cursor {
   font-size: 2.4em !important;
   color: #be6adf !important;
-} */
+}
 
-/* @media (max-width: 767px) {
+@media (max-width: 767px) {
   .Typewriter__wrapper {
     font-size: 1.4em !important;
     font-weight: 500 !important;
@@ -319,7 +319,7 @@ button:focus {
   .Typewriter__cursor {
     display: none !important;
   }
-} */
+}
 
 .myAvtar {
   justify-content: center !important;
@@ -515,9 +515,9 @@ button:focus {
   text-decoration: none !important;
 }
 
-/* .blog-link:hover {
+.blog-link:hover {
   cursor: pointer !important;
-} */
+}
 
 .blog-card-view:hover {
   transform: scale(1.02) !important;
@@ -826,13 +826,12 @@ button:focus {
 /* --------- */
 /* ContactForm */
 /* --------- */
-/* Add CSS in a separate file, e.g., ContactForm.css */
 
 form {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  /* border: 1px solid #ccc; */
+  border: 1px solid #ccc;
   border-radius: 5px;
   /* background-color: #f5f5f5; */
 }
@@ -859,7 +858,7 @@ button[type="submit"] {
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 
 .success-message {
