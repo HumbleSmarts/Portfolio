@@ -49,18 +49,33 @@ const ContactForm = () => {
 
       // Adding a popup notification upon form submittion
       // You can find more information on customization in the SweetAlert2 documentation: https://sweetalert2.github.io/
-      if (response.ok) {
+      if (response.status === 200) {
         resetForm();
         setStatus("success");
+
+        // Display the success message only if there is an actual success.
         Swal.fire("Success", "Submission was successful!", "success");
       } else {
+        console.error("Submission failed");
         setStatus("error");
-        Swal.fire("Error", "Submission failed. Please try again.", "error");
+
+        // Display the error message only if there is an actual error.
+        if (response.status !== 200) {
+          Swal.fire(
+            "Error",
+            "Error submitting from. Please try again.",
+            "error"
+          );
+        }
       }
     } catch (error) {
       console.error("Error:", error);
       setStatus("error");
-      Swal.fire("Error", "An error occurred. Please try again.", "error");
+
+      // Display the error message only if there is an actual error.
+      if (error) {
+        Swal.fire("Error", "An error occurred. Please try again.", "error");
+      }
     }
   };
 
