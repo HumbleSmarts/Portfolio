@@ -53,24 +53,31 @@ const ContactForm = () => {
         setStatus("success");
         resetForm({ values: "" });
         // Display the success message only if there is an actual success.
-        Swal.fire("Success", "Submission was successful!", "success");
+        Swal.fire(
+          "Success",
+          "Submission was successful, expect our respond soon!",
+          "success"
+        );
       } else {
-        console.error("Submission failed");
+        Swal.fire(
+          "Error",
+          "Error submitting from. Please check your internet conection and try again.",
+          "error"
+        );
+        // console.error("Submission failed");
         setStatus("error");
 
         // Display the error message the it was unable to send.
-        if (response.status !== 200) {
-          Swal.fire(
-            "Error",
-            "Error submitting from. Please try again.",
-            "error"
-          );
-        }
+        // if (response.status !== 200) {
+        //   Swal.fire(
+        //     "Error",
+        //     "Error submitting from. Please try again.",
+        //     "error"
+        //   );
+        // }
       }
     } catch (error) {
-      console.error("Error:", error);
       setStatus("error");
-
       // Display the error message only if there is an actual error.
       if (error) {
         Swal.fire("Error", "An error occurred. Please try again.", "error");
