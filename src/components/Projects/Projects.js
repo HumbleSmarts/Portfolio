@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import calc from "../../Assets/Projects/calc.png";
 import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
+// import editor from "../../Assets/Projects/codeEditor.png";
 import loginapp from "../../Assets/Projects/loginapp.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
@@ -47,7 +47,7 @@ function Projects() {
                           or deny any access to the protected data based on their authentication using react 
                           router dom programmed in Reactjs"
               ghLink="https://github.com/humblesmarts/Loginapp/"
-              demoLink="https://humblesmarts.github.io/loginapp/"
+              demoLink="https://loginauthe.vercel.app/"
             />
           </Col>
 
