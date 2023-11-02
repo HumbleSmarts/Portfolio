@@ -11,7 +11,7 @@ function AboutCard() {
             Welcome, I'm <span className="purple">Humble Abraham Wisdom </span>
             from <span className="purple"> Delta State, Nigeria.</span>
             <br /> I'm a BSC holder in the field of Computer Science from a
-            prestigous university
+            prestigious university
             <span className="purple"> IAEC-TOGO, </span> also I'm also an
             International Diploma holder in ICT from
             <span className="purple"> Informatics Academy, Singapore, </span>
@@ -19,7 +19,7 @@ function AboutCard() {
             <br />
             Additionally, I'm currently working as a{" "}
             <span className="purple"> volunteer </span>
-            at <span className="purple"> COZAGLOBAL</span> as Software
+            at <span className="purple"> COZA GLOBAL</span> as Software
             Developer. I've also worked as a{" "}
             <span className="purple">volunteer </span>at
             <span className="purple">
