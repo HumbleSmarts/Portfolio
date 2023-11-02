@@ -75,19 +75,16 @@ function Projects() {
             />
           </Col>
 
-          {/* <Col md={4} className="project-card">
+          <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={per}
               isBlog={false}
-              title=" Code Editor"
-              description="Online code and markdown editor build with react.js. 
-                          Online Editor which supports html, css, and js code with instant view of website. 
-                          Online markdown editor for building README file which supports GFM, Custom Html tags with 
-                          toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/humblesmarts/Editor.io"
-              demoLink="https://humblesmarts.github.io/editor.io/"
+              title="Portfolio Website"
+              description="The Complete Customizable Software Developer Portfolio Template which lets you showcase your work and provides each and every detail about you as Software Developer"
+              ghLink="https://github.com/humblesmarts/portfolio/"
+              demoLink="https://humblesmarts.vercel.app/"
             />
-          </Col> */}
+          </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
