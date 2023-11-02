@@ -12,7 +12,7 @@ function AboutCard() {
             from <span className="purple"> Delta State, Nigeria.</span>
             <br /> I'm a BSC holder in the field of Computer Science from a
             prestigious university
-            <span className="purple"> IAEC-TOGO, </span> also I'm also an
+            <span className="purple"> IAEC-TOGO, </span> I'm also an
             International Diploma holder in ICT from
             <span className="purple"> Informatics Academy, Singapore, </span>
             <br />
@@ -43,6 +43,9 @@ function AboutCard() {
             </li>
             <li className="about-activity">
               <ImPointRight /> Travelling
+            </li>
+            <li className="about-activity">
+              <ImPointRight /> Swimming
             </li>
           </ul>
 
