@@ -628,9 +628,10 @@ button:focus {
 /* --------- */
 
 .resume-section {
-  position: relative !important;
+  position: center !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
+  align-items: center !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
 }
@@ -638,7 +639,7 @@ button:focus {
 .resume {
   padding-top: 50px;
   padding-bottom: 50px;
-  justify-content: center;
+  justify-content: end;
 }
 
 .resume-left {
