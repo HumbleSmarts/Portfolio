@@ -9,6 +9,7 @@ import loginapp from "../../Assets/Projects/loginapp.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 import ims from "../../Assets/Projects/ims.png";
+import light from "../../Assets/Projects/light.png";
 
 function Projects() {
   return (
@@ -22,6 +23,16 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={light}
+              isBlog={false}
+              title="Buy Light "
+              description="Developed Front-End Development for Buy Light: Created a feature-rich and user-friendly front- end interface for an e-commerce platform, duplicating the functionality and design components of BuyPower.ng. Utilized cutting-edge web technology and responsive design concepts to provide consistent user experiences across multiple devices. To improve user engagement and satisfaction, I implemented easy navigation, and dynamic content presentation, all of which contribute to a smooth and visually appealing buying experience for online customers. Using React JS and Tailwind CSS."
+              // ghLink="https://github.com/humblesmarts/"
+              demoLink="https://buylight.vercel.app"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={ims}
