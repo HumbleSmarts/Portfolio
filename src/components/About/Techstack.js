@@ -19,16 +19,16 @@ import {
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={1} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <DiPython /> Python
       </Col>
-      <Col xs={4} md={1} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <DiReact /> Reactjs
       </Col>
-      <Col xs={4} md={1} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiMysql /> Mysql
       </Col>
-      <Col xs={4} md={1} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <DiDjango /> Django
       </Col>
       <Col xs={4} md={2} className="tech-icons">
