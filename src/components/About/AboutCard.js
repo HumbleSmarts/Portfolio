@@ -26,7 +26,7 @@ function AboutCard() {
               {" "}
               Dunamis International Gosple Centre{" "}
             </span>
-            for four (4) years as Chief Technology Officer (CTO) as a volunteer
+            for four (4) years as Chief Technology Officer (CTO)
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
